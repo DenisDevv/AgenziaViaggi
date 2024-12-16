@@ -1,6 +1,6 @@
 package live.denisdev.agenziaviaggi;
 
-public class PacchettoViaggi {
+public abstract class PacchettoViaggi {
     private double costo;
     public String destinazione;
     public int giorni;
@@ -17,7 +17,7 @@ public class PacchettoViaggi {
     public double getCosto() {
         return costo;
     }
-    public void setCosto(double costo) {
+    public  void setCosto(double costo) {
         this.costo = costo;
     }
     public String getDestinazione() {
