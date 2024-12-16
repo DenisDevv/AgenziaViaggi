@@ -6,8 +6,11 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
+import java.awt.*;
 import java.io.IOException;
 
 public class StaffController {
@@ -26,6 +29,10 @@ public class StaffController {
     @FXML
     protected DatePicker dataFine;
     @FXML
+    protected ComboBox<String> tipo;
+    @FXML
+    protected Label exTipo;
+    @FXML
     protected void conferma() {
 
     }
@@ -40,5 +47,17 @@ public class StaffController {
     @FXML
     protected void dataFine() {
         exDurata.setText((java.time.temporal.ChronoUnit.DAYS.between(dataInizio.getValue(), dataFine.getValue())) + " Giorni");
+    }
+    @FXML
+    protected void initialize() {
+        tipo.getItems().addAll("Volo (Solo Andata)", "Volo (Andata e Ritorno)", "Pasti (Mezza Pensione)", "Pasti (Pensione Completa)", "Escursioni");
+    }
+    @FXML
+    protected void tipo() {
+        exTipo.setText(tipo.getValue());
+    }
+    @FXML
+    protected void nEscursioni() {
+
     }
 }

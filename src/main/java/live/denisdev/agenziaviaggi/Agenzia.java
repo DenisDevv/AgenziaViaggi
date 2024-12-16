@@ -7,7 +7,7 @@ public class Agenzia {
     public Agenzia() {
         pacchettoViaggi = new ArrayList<>();
     }
-    public void addVolo(String destinazione, double costo, int giorni) {
-        pacchettoViaggi.add(new PacchettoVolo(costo, destinazione, giorni));
+    public void addVolo(String destinazione, double costo, int giorni, boolean andataRitorno) {
+        pacchettoViaggi.add(new PacchettoVolo(costo, destinazione, giorni, andataRitorno));
     }
 }
