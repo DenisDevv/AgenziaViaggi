@@ -13,14 +13,13 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: ff3b3b;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="live.denisdev.agenziaviaggi.StaffController">
    <bottom>
-      <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0" style="-fx-background-color: C72E2EFF; -fx-background-radius: 10px 10px 0px 0px;" BorderPane.alignment="CENTER">
+      <HBox fx:id="barra" prefHeight="100.0" prefWidth="200.0" spacing="10.0" style="-fx-background-color: C72E2EFF; -fx-background-radius: 10px 10px 0px 0px;" BorderPane.alignment="CENTER">
          <children>
             <TextField fx:id="destinazione" onKeyTyped="#destinazione" promptText="Destinazione" style="-fx-background-color: white; -fx-background-radius: 10px;" />
             <TextField fx:id="costo" onKeyTyped="#costo" promptText="Costo Base" style="-fx-background-color: white; -fx-background-radius: 10px;" />
             <DatePicker fx:id="dataInizio" promptText="Data Inizio" style="-fx-background-color: white;" />
             <DatePicker fx:id="dataFine" onAction="#dataFine" promptText="Data Fine" style="-fx-background-color: white;" />
             <ComboBox fx:id="tipo" onAction="#tipo" prefWidth="150.0" promptText="Pacchetto" style="-fx-background-radius: 10px; -fx-background-color: white;" />
-            <TextField fx:id="nEscursioni" onAction="#nEscursioni" onKeyTyped="#costo" promptText="N. Escursioni" style="-fx-background-color: white; -fx-background-radius: 10px;" />
          </children>
          <padding>
             <Insets bottom="10.0" left="10.0" right="10.0" top="40.0" />

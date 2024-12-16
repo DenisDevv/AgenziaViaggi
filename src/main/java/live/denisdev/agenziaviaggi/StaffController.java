@@ -8,6 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
 import java.awt.*;
@@ -16,6 +17,8 @@ import java.io.IOException;
 public class StaffController {
     @FXML
     protected TextField destinazione;
+    @FXML
+    protected HBox barra;
     @FXML
     protected Label exDestinazione;
     @FXML
@@ -55,6 +58,15 @@ public class StaffController {
     @FXML
     protected void tipo() {
         exTipo.setText(tipo.getValue());
+        if (tipo.getValue().equals("Escursioni")) {
+            TextField nEscursioni = new TextField();
+            nEscursioni.setPromptText("N. Escursioni");
+            nEscursioni.setId("nEscursioni");
+            nEscursioni.setOnAction(e -> nEscursioni());
+            barra.getChildren().add(nEscursioni);
+        } else {
+            barra.getChildren().removeIf(node -> node.getId() != null && node.getId().equals("nEscursioni"));
+        }
     }
     @FXML
     protected void nEscursioni() {
